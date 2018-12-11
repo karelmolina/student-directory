@@ -1,6 +1,8 @@
 def input_students
   puts "Please enter the name of the student"
   puts "to finish, just hit return twice"
+  #for exercise #2 letter which the name going to be printed
+  puts "only showing names with the letter K"
 
   #empty array of students
   students = []
@@ -29,7 +31,9 @@ end
 def print_names names
 names.each_with_index do |student, index|
   number = index + 1
-  puts "#{number}. #{student[:name]}, (#{student[:cohort]} cohort)"
+  if student[:name].start_with?("k")
+    puts "#{number}. #{student[:name]}, (#{student[:cohort]} cohort)"
+  end
 end
 
 end
