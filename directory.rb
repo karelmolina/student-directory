@@ -27,7 +27,11 @@ puts "-------------"
 end
 
 def print_names names
-names.each { |student| puts "#{student[:name]}, (#{student[:cohort]} cohort)" }
+names.each_with_index do |student, index|
+  number = index + 1
+  puts "#{number}. #{student[:name]}, (#{student[:cohort]} cohort)"
+end
+
 end
 
 def print_footer names
